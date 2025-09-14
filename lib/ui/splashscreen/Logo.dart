@@ -28,9 +28,9 @@ class Logo extends StatelessWidget {
           ),
           Positioned(
             top: 10,
-            right: -5,
-            child: Icon(
-              Icons.star,
+            right: -2,
+            child: ImageIcon(
+              AssetImage('assets/images/shines.png'),
               size: 48,
               color: const Color(0xFF7D22CC),
             ),
