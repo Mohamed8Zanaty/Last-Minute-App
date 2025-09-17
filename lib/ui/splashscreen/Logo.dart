@@ -20,15 +20,15 @@ class Logo extends StatelessWidget {
                 borderRadius: BorderRadius.circular(32),
               ),
               child: const Icon(
-                Icons.favorite,
-                size: 72,
+                Icons.favorite_border,
+                size: 68,
                 color: Colors.white,
               ),
             ),
           ),
           Positioned(
-            top: 10,
-            right: -2,
+            top: 6,
+            right: 14,
             child: ImageIcon(
               AssetImage('assets/images/shines.png'),
               size: 48,
