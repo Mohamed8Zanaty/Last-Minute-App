@@ -218,7 +218,7 @@ class _SymptomDescribeCardState extends State<_SymptomDescribeCard> {
           const Text('How long have you had these symptoms?', style: TextStyle(fontWeight: FontWeight.w500)),
           const SizedBox(height: 8),
           SizedBox(
-            height: 44,
+            height: 64,
             child: DropdownButtonFormField<String>(
               value: _selected,
               decoration: InputDecoration(
