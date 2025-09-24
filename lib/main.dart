@@ -1,5 +1,7 @@
+
+
 import 'package:flutter/material.dart';
-import 'screens/find_clinics_screen.dart';
+import 'ui/screens/findclinicsscreen/find_clinics_screen.dart';
 
 void main() {
   runApp(const MyApp());
