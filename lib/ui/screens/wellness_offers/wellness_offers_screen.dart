@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'WellnessOffer.dart';
+import '../../../models/WellnessOffer.dart';
 final List<WellnessOffer> offers = [
   WellnessOffer(
     title: "Premium Gym Membership",
@@ -76,7 +76,7 @@ class WellnessOffersScreen extends StatelessWidget{
       appBar: AppBar(
         leading: Padding(
           padding: EdgeInsetsDirectional.only(start: 22),
-          child:  IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,size: 20,color: Color(0xFF3730a2),)),
+          child:  IconButton(onPressed: (){Navigator.pushReplacementNamed(context, '/home');}, icon: Icon(Icons.arrow_back,size: 20,color: Color(0xFF3730a2),)),
 
         ),
         title: Row(

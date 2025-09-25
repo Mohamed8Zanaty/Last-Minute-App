@@ -25,7 +25,6 @@ class _AiHealthCheckPageState extends State<AiHealthCheckPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Use SafeArea + scrollable column
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
@@ -35,11 +34,10 @@ class _AiHealthCheckPageState extends State<AiHealthCheckPage> {
               const TopBar(),
               const SizedBox(height: 20),
               UploadLabCard(
+                // save uploaded data and send it to the model
                 onUploadClick: () {
-                  // TODO: implement upload
                 },
                 onAnalyzeClick: () {
-                  // If the upload analysis flow should trigger results:
                   _showResults();
                 },
               ),

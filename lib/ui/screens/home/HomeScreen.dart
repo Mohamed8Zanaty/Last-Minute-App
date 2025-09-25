@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import '../chatscreen/ChatScreen.dart';
-import '../notificationsscreen/notifications.dart';
-import '../profilescreen/ProfileScreen.dart';
+import '../settings/settings_screen.dart';
+import '../wellness_offers/wellness_offers_screen.dart';
+import '../chat/ChatScreen.dart';
+import '../notifications/notifications.dart';
+import '../profile/ProfileScreen.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
      const HomeContent(), // We'll extract the home content
      Chatscreen(),
      ProfileScreen(),
-    const Placeholder(), // For Settings (you can create this later)
+    const SettingsScreen(),
     const NotificationsPage(),
   ];
 
@@ -367,7 +368,9 @@ class HomeContent extends StatelessWidget {
                       ),
                       Spacer(),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/wellness_offers');
+                        },
                         style: TextButton.styleFrom(
                           backgroundColor: Colors.deepPurple.shade200,
                           minimumSize: Size(40, 30),

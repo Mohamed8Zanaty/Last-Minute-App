@@ -25,7 +25,7 @@ class MedicalRecordsPage extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                      onPressed: () => Navigator.pop(context),
+                      onPressed: () => Navigator.pushReplacementNamed(context, '/home'),
                   ),
                   const SizedBox(width: 6),
                   Expanded(

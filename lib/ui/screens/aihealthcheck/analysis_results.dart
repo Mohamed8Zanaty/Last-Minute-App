@@ -87,7 +87,7 @@ class AnalysisResultsBody extends StatelessWidget {
           flex: 1,
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/chat'); // Navigate to chat
+              Navigator.pushNamed(context, '/book');
             },
             style: ElevatedButton.styleFrom(backgroundColor: purple600, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24))),
             child: const Padding(

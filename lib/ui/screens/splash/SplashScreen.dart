@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Navigate to signup after 2 seconds
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/signup');
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 

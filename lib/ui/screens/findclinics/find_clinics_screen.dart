@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../models/clinic.dart';
-import '../../../widgets/clinic_card.dart';
-import '../../../widgets/filter_row.dart';
-import '../../../widgets/interactive_map_card.dart';
-import '../../../widgets/top_bar.dart';
+import '../../widgets/clinic_card.dart';
+import '../../widgets/filter_row.dart';
+import '../../widgets/interactive_map_card.dart';
+import '../../widgets/top_bar.dart';
 
 
 // sample data

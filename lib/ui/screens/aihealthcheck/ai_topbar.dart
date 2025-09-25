@@ -9,7 +9,7 @@ class TopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: () {Navigator.pop(context);}, icon: const Icon(Icons.arrow_back, color: purple600)),
+        IconButton(onPressed: () {Navigator.pushReplacementNamed(context, '/home');}, icon: const Icon(Icons.arrow_back, color: purple600)),
         const SizedBox(width: 12),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -52,7 +52,7 @@ class NotificationsPage extends StatelessWidget {
               children: [
                 // back button (fixed size)
                 IconButton(
-                  onPressed: () => Navigator.maybePop(context),
+                  onPressed: () => Navigator.pushReplacementNamed(context, '/home'),
                   icon: const Icon(Icons.arrow_back_ios),
                 ),
 

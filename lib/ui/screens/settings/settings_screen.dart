@@ -32,7 +32,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         leading: Padding(
           padding: EdgeInsetsDirectional.only(start: 22),
-          child:  IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,size: 20,color: Color(0xFF3730a2),)),
+          child:  IconButton(onPressed: (){Navigator.pushReplacementNamed(context, '/home');}, icon: Icon(Icons.arrow_back,size: 20,color: Color(0xFF3730a2),)),
 
         ),
         title: Row(

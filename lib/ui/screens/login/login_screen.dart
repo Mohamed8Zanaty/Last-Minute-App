@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Logo.dart';
+import '../../widgets/Logo.dart';
 
 class LoginScreen extends StatelessWidget {
   var userNameController=TextEditingController();
@@ -121,10 +121,7 @@ class LoginScreen extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {
                             if(formKey.currentState?.validate()==true){
-                              /* showDialog(context: context, builder: (context)=>AlertDialog(title: Text(data),
-                                     content: Text(data),));*/
-                              //true validation
-
+                                Navigator.pushReplacementNamed(context, '/home');
                             }
 
                           },
@@ -155,7 +152,7 @@ class LoginScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text("Don't have an account?",style: TextStyle(fontSize: 16,color: Color(0xFF3730a2),),),
-                          TextButton(onPressed: (){}, child: Text("Create one",style: TextStyle(fontSize: 16,color: Color(0xFF7e22cd),),)),
+                          TextButton(onPressed: (){Navigator.pushNamed(context, '/signup');}, child: Text("Create one",style: TextStyle(fontSize: 16,color: Color(0xFF7e22cd),),)),
                         ],
                       ),
                     ],
