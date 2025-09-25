@@ -1,20 +1,78 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../chatscreen/ChatScreen.dart';
+import '../notificationsscreen/notifications.dart';
+import '../profilescreen/ProfileScreen.dart';
 
-class Home extends StatefulWidget {
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  State<Home> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<Home> {
+class _HomeScreenState extends State<HomeScreen> {
+  int _currentIndex = 0;
+
+  // Navigation destinations
+  final List<Widget> _screens = [
+     const HomeContent(), // We'll extract the home content
+     Chatscreen(),
+     ProfileScreen(),
+    const Placeholder(), // For Settings (you can create this later)
+    const NotificationsPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
-      body: Padding(
+      body: _screens[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        selectedItemColor: Colors.deepPurple,
+        unselectedItemColor: Colors.deepPurple.withOpacity(0.5),
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_outlined),
+            label: "Chats",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: "Profile",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings_outlined),
+            label: "Settings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications_outlined),
+            label: "Notifications",
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class HomeContent extends StatelessWidget {
+  const HomeContent({super.key});
+  @override
+  Widget build(BuildContext context) {
+
+
+    return Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
@@ -144,10 +202,7 @@ class _HomeScreenState extends State<Home> {
                   SizedBox(height: 8),
                   TextButton(
                     onPressed:
-                        (
-                        /*Code el on preesed */
-
-                        ) {},
+                        () {Navigator.pushNamed(context, '/ai_health_check');},
                     style: TextButton.styleFrom(
                       backgroundColor: Color(0xFF6f2dbd),
                       padding:
@@ -227,7 +282,9 @@ class _HomeScreenState extends State<Home> {
                   ),
                   SizedBox(height: 12),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/chat');
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.white,
                       padding:
@@ -253,11 +310,31 @@ class _HomeScreenState extends State<Home> {
             //  Cards
             Row(
               children: [
-                Expanded(child: _buildCard(Icons.description_outlined,
-                    "Medical Records", "Emergency access")),
-                SizedBox(width: 12),
-                Expanded(child: _buildCard(Icons.location_on_outlined,
-                    "Find Clinics", "Nearby Hospitals")),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/medical_records');
+                    },
+                    child: _buildCard(
+                      Icons.description_outlined,
+                      "Medical Records",
+                      "Emergency access",
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/find_clinics');
+                    },
+                    child: _buildCard(
+                      Icons.location_on_outlined,
+                      "Find Clinics",
+                      "Nearby Hospitals",
+                    ),
+                  ),
+                ),
               ],
             ),
 
@@ -347,25 +424,6 @@ class _HomeScreenState extends State<Home> {
             )
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.deepPurple,
-        unselectedItemColor: Colors.deepPurple,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.chat_outlined), label: "Chats"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: "Profile"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined), label: "Settings"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_outlined),
-              label: "Notifications"),
-        ],
-      ),
     );
   }
 
@@ -438,5 +496,4 @@ class _HomeScreenState extends State<Home> {
       ),
     );
   }
-
 }

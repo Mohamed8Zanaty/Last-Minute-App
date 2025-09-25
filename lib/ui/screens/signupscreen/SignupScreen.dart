@@ -239,21 +239,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (Formkey.currentState?.validate() == true) {
-                                showDialog(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                    actions: [
-                                      TextButton(
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: Text("OK"))
-                                    ],
-                                    title: Text("Congrats"),
-                                    content: Text(
-                                        "Congrats you logged in with ${EmailController.text}, with password ${PasswordController.text}"),
-                                  ),
-                                );
+                                Navigator.pushReplacementNamed(context, '/home');
                               }
                             },
                             style: ElevatedButton.styleFrom(
