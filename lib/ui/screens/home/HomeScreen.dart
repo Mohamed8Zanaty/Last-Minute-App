@@ -17,9 +17,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
-  // Navigation destinations
   final List<Widget> _screens = [
-     const HomeContent(), // We'll extract the home content
+     const HomeContent(), 
      Chatscreen(),
      ProfileScreen(),
     const SettingsScreen(),

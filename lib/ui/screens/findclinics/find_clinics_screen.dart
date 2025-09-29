@@ -49,7 +49,7 @@ class _FindClinicsScreenState extends State<FindClinicsScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const TopBar(),
+            const TopBar(title: 'Find Clinics'),
             const SizedBox(height: 12),
             InteractiveMapCard(
               onTap: () {
@@ -72,7 +72,6 @@ class _FindClinicsScreenState extends State<FindClinicsScreen> {
                 separatorBuilder: (_, __) => const SizedBox(height: 12),
                 itemBuilder: (context, index) {
                   final clinic = sampleClinics[index];
-                  // you can optionally apply filter logic here
                   return ClinicCard(clinic: clinic);
                 },
               ),

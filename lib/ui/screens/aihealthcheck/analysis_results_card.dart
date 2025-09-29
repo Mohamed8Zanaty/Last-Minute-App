@@ -1,10 +1,7 @@
 // lib/analysis_results_card.dart
-
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'api_service.dart';
 
-// Using your app's existing colors
 const Color purple600 = Color(0xFF9B6BFF);
 const Color mutedText = Color(0xFF8A86A9);
 const Color cardBgLight = Color(0xFFF6F5FF);
@@ -16,9 +13,6 @@ class AnalysisResultsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Decode the Base64 image string from the API
-    final imageBytes = base64Decode(response.shapPlotBase64);
-
     return Card(
       color: cardBgLight,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -53,14 +47,6 @@ class AnalysisResultsCard extends StatelessWidget {
                 ],
               ),
             )),
-            const Divider(height: 32),
-
-            const Text('Prediction Breakdown:', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 12),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image.memory(imageBytes),
-            ),
           ],
         ),
       ),

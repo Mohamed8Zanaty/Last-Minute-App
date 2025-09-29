@@ -10,7 +10,6 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:Color(0xFFf8f7fc) ,
-      //extendBodyBehindAppBar: true,
       extendBody: true,
       body:SingleChildScrollView(child: Center(
         child: Column(

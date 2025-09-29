@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-
-// Single-file Notifications page. Put this file in your `lib/` folder
-// and use it from main.dart with: `home: NotificationsPage()`
-
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({Key? key}) : super(key: key);
 
@@ -50,7 +46,6 @@ class NotificationsPage extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // back button (fixed size)
                 IconButton(
                   onPressed: () => Navigator.pushReplacementNamed(context, '/home'),
                   icon: const Icon(Icons.arrow_back_ios),
@@ -58,12 +53,10 @@ class NotificationsPage extends StatelessWidget {
 
                 const SizedBox(width: 6),
 
-                // Title + subtitle area is flexible so it can shrink if needed
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Title row: let the title ellipsize if it's too long
                       Row(
                         children: [
                           Expanded(
@@ -81,7 +74,6 @@ class NotificationsPage extends StatelessWidget {
 
                           const SizedBox(width: 8),
 
-                          // small badge (keeps its size)
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
@@ -99,10 +91,7 @@ class NotificationsPage extends StatelessWidget {
                           ),
                         ],
                       ),
-
                       const SizedBox(height: 6),
-
-                      // subtitle should also ellipsize if needed
                       const Text(
                         'Stay updated with your health journey',
                         style: TextStyle(
@@ -117,9 +106,6 @@ class NotificationsPage extends StatelessWidget {
                 ),
 
                 const SizedBox(width: 8),
-
-                // Constrain the Mark All Read button so it can't push everything off-screen.
-                // Use Flexible so it can shrink if space is tight.
                 Flexible(
                   fit: FlexFit.loose,
                   child: FittedBox(

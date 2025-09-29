@@ -31,10 +31,7 @@ class InteractiveMapCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(radius),
               child: Stack(
                 children: [
-                  // Optional: background to show behind inner container
                   Positioned.fill(child: Container(color: Colors.transparent)),
-
-                  // inner container pinned to top, with same corner radius
                   Positioned(
                     left: 0,
                     right: 0,

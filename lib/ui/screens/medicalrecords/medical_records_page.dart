@@ -1,7 +1,3 @@
-// lib/medical_records_page.dart
-// This is a single-file Flutter page widget for the "My Medical Records" UI.
-// Save this file as lib/medical_records_page.dart and import it from main.dart.
-
 import 'package:flutter/material.dart';
 
 class MedicalRecordsPage extends StatelessWidget {
@@ -240,7 +236,6 @@ class _StatBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // small fixed height to avoid tiny overflows; adjust if needed
     return Container(
       height: 76,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
@@ -258,7 +253,6 @@ class _StatBox extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // make the big number scale down instead of overflowing
           Expanded(
             child: Align(
               alignment: Alignment.center,
@@ -328,7 +322,6 @@ class MedicalRecordCard extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Left timeline icon + line
                 SizedBox(
                   width: 52,
                   child: Column(
@@ -453,7 +446,6 @@ class MedicalRecordCard extends StatelessWidget {
   }
 }
 
-// Small extension to slightly darken a color for text inside chips.
 extension ColorUtils on Color {
   Color darken([double amount = .1]) {
     assert(amount >= 0 && amount <= 1);
@@ -466,25 +458,3 @@ extension ColorUtils on Color {
     );
   }
 }
-
-/*
-  How to run from main.dart:
-
-  // lib/main.dart
-  import 'package:flutter/material.dart';
-  import 'medical_records_page.dart';
-
-  void main() => runApp(const MyApp());
-
-  class MyApp extends StatelessWidget {
-    const MyApp({super.key});
-
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const MedicalRecordsPage(),
-      );
-    }
-  }
-*/

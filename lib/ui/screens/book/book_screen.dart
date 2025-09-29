@@ -194,19 +194,6 @@ class BookScreen extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  /* Container(
-                                    width: MediaQuery.sizeOf(context).width *0.16,
-                                    height: MediaQuery.sizeOf(context).width *0.16,
-                                    decoration: BoxDecoration(
-                                      color:Color(0xFFa78bfa),// const Color(0xFFA68AFA),
-                                      borderRadius: BorderRadius.circular(MediaQuery.sizeOf(context).width*0.04),
-                                    ),
-                                    child: Icon(
-                                      offer.icon,
-                                      size:MediaQuery.sizeOf(context).width*0.12,
-                                      color: offer.featured?Colors.white:Color(0xFF7e22cd),
-                                    ),
-                                  ),*/
                                 ],
                               ),
                               SizedBox(width: 20),
@@ -275,85 +262,6 @@ class BookScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-
-                              /* Expanded(
-                                child: Column(
-                                  //mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(offer.title,style: TextStyle(fontWeight: FontWeight.bold,color:offer.featured? Colors.white:Color(0xFF3730a2),fontSize: 24),),
-                                    Text(offer.subtitle,style: TextStyle(color: offer.featured? Colors.white:Color(0xFF3730a2),fontSize: 16),),
-                                    SizedBox(height: 5,),
-                                    Row(children: [
-                                      Container(
-                                        // width: MediaQuery.sizeOf(context).width*0.12,
-                                        // height: MediaQuery.sizeOf(context).height*0.015,
-                                        alignment: Alignment.center,
-                                        decoration: BoxDecoration(
-                                          color: offer.featured? Color(0xFF7e22cd):Color(0xFFa78bfa),
-                                          borderRadius: BorderRadius.circular(8),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 8,vertical: 2
-                                          ),
-                                          child: Text(offer.category,style: TextStyle(fontSize: 14,color: Colors.white,fontWeight: FontWeight.bold),),
-                                        ),),
-                                      SizedBox(width: 10,),
-                                      Visibility(
-                                        visible:offer.discount.isNotEmpty,//can't be null
-                                        child: Container(
-                                          // width: MediaQuery.sizeOf(context).width*0.12,
-                                          // height: MediaQuery.sizeOf(context).height*0.015,
-                                          alignment: Alignment.center,
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: offer.featured?Colors.white:Color(0xFF7e22cd)),
-                                            borderRadius: BorderRadius.circular(8),
-                                          ),
-                                          child: Padding(
-                                              padding: const EdgeInsets.symmetric(
-                                                  horizontal: 6,vertical: 2
-                                              ),
-                                              child: Row(
-                                                children: [
-                                                  Icon(Icons.sell_outlined,color: offer.featured?Colors.white:Color(0xFF7e22cd),size: 14,),
-                                                  SizedBox(width: 6,),
-                                                  Text(offer.discount ?? "",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12,color: offer.featured?Colors.white:Color(0xFF7e22cd)),)
-                                                ],
-                                              )
-                                            //Text("Fitness",style: TextStyle(fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold),),
-                                          ),),
-                                      ),
-                                    ],),
-                                    SizedBox(height: 5,),
-                                    Row(children: [
-                                      Icon(Icons.access_time,color:offer.featured? Colors.white:Color(0xFF7e22cd),size: 14,),
-                                      SizedBox(width: 3,),
-                                      Text(offer.validUntil,style: TextStyle(color: offer.featured?Colors.white:Color(0xFF3730a2),fontSize: 12,fontWeight: FontWeight.bold),)
-                                    ],
-                                    )
-
-                                  ],
-                                ),
-                              ),
-                              Visibility(
-                                visible:offer.featured,
-                                child: Container(
-                                  // width: MediaQuery.sizeOf(context).width*0.12,
-                                  // height: MediaQuery.sizeOf(context).height*0.015,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.2),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8,vertical: 2
-                                    ),
-                                    child: Text("Featured",style: TextStyle(fontSize: 14,color: Colors.white,fontWeight: FontWeight.bold),),
-                                  ),),
-                              ),*/
                             ],
                           ),
                           SizedBox(height: 15),
@@ -444,43 +352,10 @@ class BookScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  //Text("Fitness",style: TextStyle(fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold),),
                                 ),
                               ),
                             ],
                           ),
-                          /*Row(children: [
-                            Expanded(child: Text(offer.description,maxLines: 2,style: TextStyle(overflow: TextOverflow.ellipsis,color: offer.featured?Colors.white:Color(0xFF3730a2),fontSize: 13,fontWeight: FontWeight.bold),)),
-                          ],
-                          ),
-                          SizedBox(height: 20,),
-                          Row(children: [
-                            Text(offer.oldPrice,style: TextStyle(color: offer.featured?Colors.white54:Colors.grey,fontSize: 16,fontWeight: FontWeight.bold,decoration: TextDecoration.lineThrough,decorationColor: offer.featured?Colors.white54:Colors.grey,decorationThickness: 2,),),
-                            SizedBox(width: 10,),
-                            Text(offer.newPrice,style: TextStyle(fontWeight: FontWeight.bold,color:offer.featured? Colors.white:Color(0xFF7e22cd),fontSize: 18),),
-                            Spacer(),
-                            Container(
-                              // width: MediaQuery.sizeOf(context).width*0.12,
-                              // height: MediaQuery.sizeOf(context).height*0.015,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: offer.featured? Colors.white:Color(0xFF7e22cd),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 8,vertical: 4
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.shopping_bag_outlined,color:offer.featured? Color(0xFF7e22cd):Colors.white,size: 20,),
-                                      SizedBox(width: 5,),
-                                      Text("Claim Offer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: offer.featured? Color(0xFF7e22cd):Colors.white),)
-                                    ],
-                                  )
-                                //Text("Fitness",style: TextStyle(fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold),),
-                              ),)
-                          ],)*/
                         ],
                       ),
                     ),

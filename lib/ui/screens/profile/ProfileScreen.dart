@@ -37,7 +37,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
 
-            // ------- Profile Card -------
+            // ----------------- Profile Card -----------
             Container(
               margin: EdgeInsets.only(top: 20),
               padding: EdgeInsets.all(16),
@@ -116,7 +116,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            // ------- Stats Section -------
+            // -------------------- Stats Section --------------------
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -136,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            // ------- Personal Info -------
+            // ------------------ Personal Info ------------
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -236,7 +236,7 @@ class ProfileScreen extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            // ------- Quick Access -------
+            // ----------------- Quick Access --------------
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -322,7 +322,7 @@ class ProfileScreen extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            // ------- Sign Out Button -------
+            // ---------------- Sign Out Button ------------
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
