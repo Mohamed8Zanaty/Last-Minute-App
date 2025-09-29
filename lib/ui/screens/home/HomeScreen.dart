@@ -284,6 +284,7 @@ class HomeContent extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/chat');
+                      Navigator.pushNamed(context, '/book');
                     },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.white,
@@ -408,6 +409,9 @@ class HomeContent extends StatelessWidget {
                     width: double.infinity,
                     child: TextButton(
                       onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/wellness_offers');
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color(0xFF6f2dbd),
                         padding: const EdgeInsets.symmetric(vertical: 14),
